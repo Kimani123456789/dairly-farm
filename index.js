@@ -181,4 +181,89 @@ function report(value) {
         document.getElementById('reportsoutput').innerText = allOutPutComparisson;
 
     };
-    
+    //User rate input selection and report geneneration
+
+function displayPrompt(select) {
+    select = parseInt(prompt("Kindly input your rate here, e.g: 50 (for Ksh.50)"));
+
+    let userInput = [
+        monthlyData.january * dailyLtrsTotal * select, monthlyData.february * dailyLtrsTotal * select,
+        monthlyData.march * dailyLtrsTotal * select, monthlyData.april * dailyLtrsTotal * select,
+        monthlyData.may * dailyLtrsTotal * select, monthlyData.june * dailyLtrsTotal * select,
+        monthlyData.july * dailyLtrsTotal * select, monthlyData.august * dailyLtrsTotal * select,
+        monthlyData.sept * dailyLtrsTotal * select, monthlyData.oct * dailyLtrsTotal * select,
+        monthlyData.nov * dailyLtrsTotal * select, monthlyData.dec * dailyLtrsTotal * select];
+
+
+    let userInputDataTotal = (userInput[0] + userInput[1] + userInput[2]
+        + userInput[3] + userInput[4] + userInput[5] + userInput[6] + userInput[7] + userInput[8]
+        + userInput[9] + userInput[10] + userInput[11]);
+
+
+    let userInputData =
+        `Your income for January at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[0]}.
+    Your income for February at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[1]}.
+    Your income for March at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[2]}.
+    Your income for April at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[3]}.
+    Your income for May at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[4]}.
+    Your income for June at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[5]}.
+    Your income for July at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[6]}.
+    Your income for August at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[7]}.
+    Your income for September at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[8]}.
+    Your income for October at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[9]}.
+    Your income for November at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[10]}.
+    Your income for December at a rate of Ksh.${select} 
+    per litre will be Ksh.${userInput[11]}.
+    Your annual income at Ksh.${select} is Ksh.${userInputDataTotal}.
+    `;
+
+    if ((select === null) || (!isNaN(select) === false)
+        || (typeof select === "string")) {
+        location.reload();
+    };
+
+    document.getElementById('displayselectedrate').innerText =
+        `You've selected a Ksh.${select} buying rate.`;
+    document.getElementById('displayselectedrate').style.display = 'block';
+    document.getElementById('displayselectedrate').style.color = 'white';
+    document.getElementById('displayselectedrate').style.backgroundColor = 'red';
+    document.getElementById('selectedreportsoutput').innerText = userInputData;
+
+};
+
+//User rate input selection and report geneneration
+//Switch Year Type
+function switchToNormalYear() {
+    monthlyData.february = 28;
+    let displayYear = `You've selected a Normal Year! (365 days)`;
+    document.getElementById('displaynormalyear').innerText = displayYear;
+    document.getElementById('displaynormalyear').style.display = 'block';
+    document.getElementById('yearselectioncontainer').style.color = 'white';
+    document.getElementById('yearselectioncontainer').style.backgroundColor = 'red';
+    document.getElementById('displayleapyear').style.display = 'none';
+
+}
+
+function switchToLeapYear() {
+    monthlyData.february = 29;
+    let displayYear = `You've selected a Leap Year! (366 days)`;
+    document.getElementById('displayleapyear').innerText = displayYear;
+    document.getElementById('displayleapyear').style.display = 'block';
+    document.getElementById('yearselectioncontainer').style.color = 'white';
+    document.getElementById('yearselectioncontainer').style.backgroundColor = 'red';
+    document.getElementById('displaynormalyear').style.display = 'none';
+}
+
+//Switch Year Type
+
