@@ -74,6 +74,24 @@ const shedDDaily = dailyMilkProduction(52, 11);
         nov: 30,
         dec: 31
     };
+    //Leap year complete income report
+function report(value) {
+
+    let allOutPutFirstYear =
+        `The income for January is Ksh.${monthlyData.january * value}
+    The income for February is Ksh.${monthlyData.february * value}
+    The income for March is Ksh.${monthlyData.march * value}
+    The income for April is Ksh.${monthlyData.april * value}
+    The income for May is Ksh.${monthlyData.may * value}
+    The income for June is Ksh.${monthlyData.june * value}
+    The income for July is Ksh.${monthlyData.july * value}
+    The income for August is Ksh.${monthlyData.august * value}
+    The income for September is Ksh.${monthlyData.sept * value}
+    The income for October is Ksh.${monthlyData.oct * value}
+    The income for November is Ksh.${monthlyData.nov * value}
+    The income for December is Ksh.${monthlyData.dec * value}`;
+
+    document.getElementById('leapreportsoutput').innerText = allOutPutFirstYear;
 
 
 

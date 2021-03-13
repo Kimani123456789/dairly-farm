@@ -1,3 +1,56 @@
 table ,th ,td{
     border: 2px solid black;
 }
+
+.ouputfield {
+    background-color: black;
+    color: aqua;
+    margin: 1% 5% 5% 5%;
+    padding: 2% 5% 5% 5%;
+    border: 2px solid green;
+    box-shadow: 2vh 1vh 3vh .5vh green;
+    width: 80%;
+    animation: shadow 2s linear infinite;
+    transition: 1s linear 0s;
+}
+
+.ouputfield:hover,
+.ouputfield:active {
+    animation: interactive 1s linear infinite;
+}
+
+.outputcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.anim {
+    font-weight: 900;
+    color: red;
+    animation: blinkk 1s linear infinite;
+    transition: 1s linear 0s;
+    font-size: 7vw;
+}
+
+.inputbutton {
+    height: 14vw;
+    width: 40vw;
+    margin: 3% 0 3% 0;
+    background-color: red;
+    color: white;
+    font-size: 3.3vw;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 5vw;
+    box-shadow: 2vh 1vh 3vh .5vh rgba(0, 0, 0, 0.658);
+    display: inline;
+    transition: .2s linear 0s;
+    cursor: pointer;
+}
+
+.inputbutton:hover,
+.inputbutton:active {
+    background-color: white;
+    color: red;
+    border: 1px solid rgba(0, 0, 0, 0.712);
+}
