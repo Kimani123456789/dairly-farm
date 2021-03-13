@@ -91,7 +91,94 @@ function report(value) {
     The income for November is Ksh.${monthlyData.nov * value}
     The income for December is Ksh.${monthlyData.dec * value}`;
 
-    document.getElementById('leapreportsoutput').innerText = allOutPutFirstYear;
+    document.getElementById('leapreportsoutput').innerText = allOutPutFirstYear} ;
+
+    //Income report with new buying rate
+    function incomeComparisson(newbuyingRate) {
+
+
+        let newdailyIncome = newbuyingRate * dailyLtrsTotal;
+
+        let allData = [monthlyData.january * value, monthlyData.january * newdailyIncome,
+        monthlyData.february * value, monthlyData.february * newdailyIncome,
+        monthlyData.march * value, monthlyData.march * newdailyIncome,
+        monthlyData.april * value, monthlyData.april * newdailyIncome,
+        monthlyData.may * value, monthlyData.may * newdailyIncome,
+        monthlyData.june * value, monthlyData.june * newdailyIncome,
+        monthlyData.july * value, monthlyData.july * newdailyIncome,
+        monthlyData.august * value, monthlyData.august * newdailyIncome,
+        monthlyData.sept * value, monthlyData.sept * newdailyIncome,
+        monthlyData.oct * value, monthlyData.oct * newdailyIncome,
+        monthlyData.nov * value, monthlyData.nov * newdailyIncome,
+        monthlyData.dec * value, monthlyData.dec * newdailyIncome,
+        ];
 
 
 
+        let firstYearTotal = (allData[0] + allData[2] + allData[4] + allData[6] + allData[8] + allData[10]
+            + allData[12] + allData[14] + allData[16] + allData[18] + allData[20] + allData[22]);
+
+        let secondYearTotal = (allData[1] + allData[3] + allData[5] + allData[7] + allData[9] + allData[11]
+            + allData[13] + allData[15] + allData[17] + allData[19] + allData[21] + allData[23]);
+
+        let bothYearsTotal = firstYearTotal + secondYearTotal;
+
+
+        let allOutPutComparisson =
+            `The income for January at rate Ksh.45 per litre is 
+            Ksh.${allData[0]} and Ksh.${allData[1]}
+            if rate is Ksh.49.60.
+
+            The income for February at rate Ksh.45 per litre is 
+            Ksh.${allData[2]} and Ksh.${allData[3]}
+            if rate is Ksh.49.60.
+
+            The income for March at rate Ksh.45 per litre is 
+            Ksh.${allData[4]} and Ksh.${allData[5]}
+            if rate is Ksh.49.60.
+
+            The income for April at rate Ksh.45 per litre is 
+            Ksh.${allData[6]} and Ksh.${allData[7]}
+            if rate is Ksh.49.60.
+
+            The income for May at rate Ksh.45 per litre is 
+            Ksh.${allData[8]} and Ksh.${allData[9]}
+            if rate is Ksh.49.60.
+
+            The income for June at rate Ksh.45 per litre is 
+            Ksh.${allData[10]} and Ksh.${allData[11]}
+            if rate is Ksh.49.60.
+
+            The income for July at rate Ksh.45 per litre is 
+            Ksh.${allData[12]} and Ksh.${allData[13]}
+            if rate is Ksh.49.60.
+
+            The income for August at rate Ksh.45 per litre is 
+            Ksh.${allData[14]} and Ksh.${allData[15]}
+            if rate is Ksh.49.60.
+
+            The income for September at rate Ksh.45 per litre is 
+            Ksh.${allData[16]} and Ksh.${allData[17]}
+            if rate is Ksh.49.60.
+
+            The income for October at rate Ksh.45 per litre is 
+            Ksh.${allData[18]} and Ksh.${allData[19]}
+            if rate is Ksh.49.60.
+
+            The income for November at rate Ksh.45 per litre is 
+            Ksh.${allData[20]} and Ksh.${allData[21]}
+            if rate is Ksh.49.60.
+
+            The income for December at rate Ksh.45 per litre is 
+            Ksh.${allData[22]} and Ksh.${allData[23]}
+            if rate is Ksh.49.60.
+
+            The income total for the first year at a rate of Ksh.45 is Ksh.${firstYearTotal}.
+            The income total for the second year at a rate of Ksh.49.60 is Ksh.${secondYearTotal}.
+
+            The total income for both years is Ksh.${bothYearsTotal}.`;
+
+        document.getElementById('reportsoutput').innerText = allOutPutComparisson;
+
+    };
+    
