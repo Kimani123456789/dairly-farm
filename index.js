@@ -9,7 +9,7 @@ const shedBDaily = dailyMilkProduction(11, 28);
 const shedCDaily = dailyMilkProduction(27, 18);
 const shedDDaily = dailyMilkProduction(52, 11);
 
-//Calculating daily milk production
+
 
 
 
@@ -20,13 +20,8 @@ let dailyLtrsTotal = shedADaily +
 
 let dailyIncome = dailyLtrsTotal * 45;
 
-//Calculating daily income
-
-
-//Independent Variable
+// year variable 
 let annualDays = 365;
-//Independent Variable
-
 //Milk produced per shed report
 function totalProduction() {
     let milkOutPut = `The production in Shed A is ${shedADaily} litres per day.
@@ -40,7 +35,8 @@ function totalProduction() {
 totalProduction();
 //Milk produced per shed report
 
-//Weekly and yearly income report
+//Weekly income report
+// yearly income report
 function incomeOverTime(buyingRate, time) {
 
     let weeklyIncome = buyingRate * time * dailyLtrsTotal;
@@ -54,25 +50,15 @@ The yearly income will be Ksh.${yearlyIncome}`;
 };
 
 incomeOverTime(45, 7);
-//Weekly and yearly income report
+//Weekly 
+// yearly income report
 
 
 let monthlyData = {
-    january: 31,
-    february: 29,
-    march: 31,
-    april: 30,
-    may: 31,
-    june: 30,
-    july: 31,
-    august: 31,
-    sept: 30,
-    oct: 31,
-    nov: 30,
-    dec: 31
+    january: 31,february: 29,march: 31, april: 30, may: 31, june: 30, july: 31, august: 31, sept: 30, oct: 31,nov: 30,dec: 31
 };
 
-//Leap year complete income report
+//Leap year complete 
 function report(value) {
 
     let allOutPutFirstYear =
@@ -187,9 +173,6 @@ function report(value) {
 
 };
 report(dailyIncome);
-//Leap year complete income report
-
-//User rate input selection and report geneneration
 
 function displayPrompt(select) {
     select = parseInt(prompt("Kindly input your rate here, e.g: 50 (for Ksh.50)"));
