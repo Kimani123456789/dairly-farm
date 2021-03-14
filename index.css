@@ -1,23 +1,28 @@
-body{
+.back{
     background-image: url(./images/cows.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.1;
+    text-align: center;
+    opacity: 0.9;
+    
 }
 table ,th ,td{
+    text-align: center;
     border: 2px solid black;
+    margin: 170px;
+
 }
 
 .ouputfield {
-    background-color: black;
-    color: aqua;
+    background-color: red;
+    color: white;
     margin: 1% 5% 5% 5%;
     padding: 2% 5% 5% 5%;
-    border: 2px solid green;
-    box-shadow: 2vh 1vh 3vh .5vh green;
-    width: 80%;
+    border: 2px solid yellowgreen;
+    box-shadow: 2vh 1vh 3vh .5vh blue ;
+    width: 50%;
     animation: shadow 2s linear infinite;
     transition: 1s linear 0s;
 }
@@ -34,9 +39,7 @@ table ,th ,td{
 
 .anim {
     font-weight: 900;
-    color: red;
-    animation: blinkk 1s linear infinite;
-    transition: 1s linear 0s;
+    color: whitesmoke;
     font-size: 7vw;
 }
 
@@ -44,13 +47,12 @@ table ,th ,td{
     height: 14vw;
     width: 40vw;
     margin: 3% 0 3% 0;
-    background-color: red;
+    background-color: blue;
     color: white;
     font-size: 3.3vw;
     font-weight: 700;
     border: 1px solid white;
-    border-radius: 5vw;
-    box-shadow: 2vh 1vh 3vh .5vh rgba(0, 0, 0, 0.658);
+   
     display: inline;
     transition: .2s linear 0s;
     cursor: pointer;
